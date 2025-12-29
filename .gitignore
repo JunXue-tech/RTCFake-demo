@@ -1,31 +1,5 @@
-# Sphinx 缓存文件
 .doctrees/
-.buildinfo
-objects.inv
-
-# 构建输出（可选，或者只保留 build/html 部分）
-build/*/
-!build/html/
-
-# 音频和频谱图缓存（从 source 重新生成）
-build/audio/
-build/spectrograms_color/
-build/_sources/
-
-# Python 环境
+_build/
+_site/
 __pycache__/
-*.py[cod]
-*$py.class
-.python-version
-env/
-venv/
-
-# 操作系统文件
-.DS_Store
-Thumbs.db
-
-# 编辑器文件
-.vscode/
-.idea/
-*.swp
-*.swo
+*.pyc
