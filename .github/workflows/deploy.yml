@@ -3,37 +3,52 @@ name: Deploy Sphinx to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      
-      - name: Build documentation
-        run: |
-          cd source
-          sphinx-build -b html . ../_site
-      
-      - name: Add .nojekyll file
-        run: |
-          touch _site/.nojekyll
-      
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+    - uses: actions/checkout@v4
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install sphinx sphinx-rtd-theme
+    
+    - name: Build documentation
+      run: |
+        cd source
+        sphinx-build -b html . ../_site
+        echo "Build completed"
+    
+    - name: Check build output
+      run: |
+        echo "Built files:"
+        find _site -type f | head -20
+        echo ""
+        echo "Checking for static files:"
+        ls -la _site/_static/ || echo "No _static directory found"
+        ls -la _site/_static/audio/ || echo "No audio directory found"
+    
+    - name: Add .nojekyll file
+      run: |
+        touch _site/.nojekyll
+        echo ".nojekyll file added"
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site
+        publish_branch: gh-pages
+        force_orphan: true

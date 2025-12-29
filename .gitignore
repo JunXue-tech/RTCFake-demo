@@ -1,5 +1,17 @@
-.doctrees/
+# Sphinx 构建文件
 _build/
 _site/
+*.buildinfo
+*.doctrees
+objects.inv
+*.inv
+searchindex.js
+
+# 本地构建文件
+build/
+*.html
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
