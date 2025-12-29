@@ -73,7 +73,7 @@ html_static_path = ['_static']
 html_css_files = ['css/custom.css']
 html_copy_source = True
 html_static_path = ['_static']
-html_extra_path = []
 def setup(app):
     app.add_css_file('css/custom.css')
 html_use_opensearch = True
+html_extra_path = ['CNAME']
