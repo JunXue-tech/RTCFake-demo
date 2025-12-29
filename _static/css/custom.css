@@ -1,0 +1,78 @@
+/* 如果希望将样式放在单独的CSS文件中 */
+.dataset-section {
+    margin: 40px 0;
+    padding: 20px 0;
+    border-top: 2px solid #000;
+}
+
+.dataset-subsection {
+    margin: 30px 0 20px 0;
+}
+
+.dataset-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.dataset-table th {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+    vertical-align: middle;
+}
+
+.dataset-table td {
+    border: 1px solid #ddd;
+    padding: 10px 8px;
+    vertical-align: top;
+    color: #333;
+}
+
+.audio-player {
+    margin: 5px 0;
+    min-width: 200px;
+}
+
+.audio-player audio {
+    width: 200px;
+    height: 30px;
+    filter: grayscale(100%);
+}
+
+.spectrogram-img {
+    max-width: 280px;
+    max-height: 120px;
+    border: 1px solid #eee;
+    margin: 5px 0;
+}
+
+.sample-id {
+    font-family: monospace;
+    font-size: 13px;
+    color: #000;
+    word-break: break-all;
+}
+
+.platform-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    margin: 1px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #333;
+}
+
+.note-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #ccc;
+    padding: 10px 15px;
+    margin: 15px 0;
+    font-size: 13px;
+}

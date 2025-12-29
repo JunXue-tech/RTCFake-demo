@@ -26,7 +26,13 @@ jobs:
     
     - name: Build documentation
       run: |
-        make html
+        # 进入 source 目录构建
+        cd source
+        sphinx-build -b html . ../build/html
+    
+    - name: Add .nojekyll file
+      run: |
+        touch build/html/.nojekyll
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
