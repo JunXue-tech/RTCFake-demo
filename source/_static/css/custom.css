@@ -172,3 +172,62 @@ a:hover {
         font-size: 14px !important;
     }
 }
+
+.footer,
+div.footer,
+.sphinx-footer,
+.sphinxsidebar footer,
+div.sphinxsidebar footer,
+.footerlinks,
+div.related,
+div.relations,
+div.sphinxsidebar div.sphinxsidebarwrapper,
+.sphinxsidebarwrapper,
+.relations,
+#relations,
+#navigation,
+.navigation,
+#footer,
+footer {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+}
+body {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+*[class*="copyright"],
+*[id*="copyright"],
+*:contains("Copyright"),
+*:contains("Sphinx"),
+*:contains("sphinx"),
+*:contains("created"),
+*:contains("Created") {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+}
+a[href*="sphinx-doc"],
+a[href*="sphinx"] {
+    display: none !important;
+}
+.document {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.body {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}

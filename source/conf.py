@@ -17,11 +17,11 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = 'offline-online-dataset'
-copyright = '2025, none'
-author = 'none'
+copyright = ' '
+author = ' '
 
 # The full version, including alpha/beta/rc tags
-release = '1.0'
+release = ' '
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,7 +31,8 @@ release = '1.0'
 # ones.
 extensions = [
 ]
-
+html_show_sphinx = False
+html_show_copyright = False
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
