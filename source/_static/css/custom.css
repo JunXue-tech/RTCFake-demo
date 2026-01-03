@@ -76,3 +76,101 @@
     margin: 15px 0;
     font-size: 13px;
 }
+
+/* 音频播放器样式优化 */
+.audio-player {
+    margin: 5px 0;
+    min-width: 200px;
+    max-width: 250px; /* 添加最大宽度限制 */
+    width: 100%; /* 确保自适应 */
+}
+
+.audio-player audio {
+    width: 100% !important; /* 使用 !important 确保覆盖浏览器默认样式 */
+    min-width: 200px; /* 确保最小宽度 */
+    height: 30px;
+    max-width: 250px; /* 确保最大宽度 */
+    filter: grayscale(100%);
+}
+
+/* 确保表格单元格有足够的空间 */
+.dataset-table td.audio-cell {
+    min-width: 220px; /* 增加最小宽度 */
+    max-width: 260px; /* 添加最大宽度限制 */
+    padding: 12px 10px; /* 增加内边距 */
+}
+
+/* 为音频播放器添加包装容器 */
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 200px;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/* 添加滚动容器，确保表格在小屏幕上也能正常显示 */
+.table-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* 确保表格不会被压缩 */
+.dataset-table {
+    width: auto; /* 从 100% 改为 auto */
+    min-width: 100%; /* 确保最小宽度为100% */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 1200px) {
+    .audio-player {
+        min-width: 180px;
+    }
+    
+    .audio-player audio {
+        min-width: 180px;
+    }
+    
+    .dataset-table td.audio-cell {
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .audio-player {
+        min-width: 160px;
+    }
+    
+    .audio-player audio {
+        min-width: 160px;
+    }
+    
+    .dataset-table td.audio-cell {
+        min-width: 180px;
+    }
+}
+
+.dataset-table td:nth-child(2),
+.dataset-table td:nth-child(3),
+.dataset-table td:nth-child(4),
+.dataset-table td:nth-child(5),
+.dataset-table td:nth-child(6),
+.dataset-table td:nth-child(7),
+.dataset-table td:nth-child(8),
+.dataset-table td:nth-child(9),
+.dataset-table td:nth-child(10),
+.dataset-table td:nth-child(11) {
+    min-width: 220px !important;
+    max-width: 260px !important;
+}
