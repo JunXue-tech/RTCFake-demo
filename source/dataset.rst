@@ -183,7 +183,7 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
     <div class="main-container">
     <p class="author-info">Anonymous ACL submission</p>
     
-    <h2 class="dataset-title">The RTCFake Dataset</h2>
+    <h2 class="dataset-title">Overview</h2>
     
     <div class="overview-text">
         The RTCFake dataset is a first-of-its-kind, large-scale speech deepfake collection specifically designed for real-time communication (RTC) scenarios, comprising approximately 600 hours of speech and covering 307 speakers. While existing research primarily relies on offline simulations, this dataset addresses that limitation by providing precisely paired "offline-online" samples transmitted through seven mainstream platforms, including QQ, Zoom, WeChat, etc. This dataset captures the complex, nonlinear distortions introduced by real-world "black-box" transmission, such as unknown noise suppression, echo cancellation and codec compression, providing a robust benchmark for evaluating detection models under realistic communication conditions.
