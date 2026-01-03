@@ -22,7 +22,7 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
         overflow-x: hidden;
     }
     
-     .page-title {
+    .page-title {
         font-size: 28px; /* 从32px减小到28px */
         font-weight: bold;
         text-align: center;
@@ -54,13 +54,12 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
         color: #444;
     }
     
-     .table-title {
-        font-size: 5px; /* 进一步减小到9px */
+    .table-title {
+        font-size: 16px; /* 从18px减小到16px */
         font-weight: bold;
-        margin: 18px 0 6px 0; /* 更紧凑的边距 */
+        margin: 20px 0 8px 0; /* 调整边距使其更紧凑 */
         color: #333;
         text-align: left;
-        white-space: wrap; /* 防止换行 */
     }
     
     .section-divider {
