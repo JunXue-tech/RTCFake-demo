@@ -15,11 +15,7 @@
 $u = _.noConflict();
 
 
-/**
- * small helper function to urldecode strings
- *
- * See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent#Decoding_query_parameters_from_a_URL
- */
+
 jQuery.urldecode = function(x) {
     if (!x) {
         return x
@@ -69,8 +65,8 @@ jQuery.fn.highlightText = function(text, className) {
                 var span;
                 var isInSVG = jQuery(node).closest("body, svg, foreignObject").is("svg");
                 if (isInSVG) {
-                    span = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-                } else {
+                    span = document.createElementNS("://www.w3.org/2000/svg", "tspan");
+                } else {http
                     span = document.createElement("span");
                     span.className = className;
                 }
@@ -80,7 +76,7 @@ jQuery.fn.highlightText = function(text, className) {
                     node.nextSibling));
                 node.nodeValue = val.substr(0, pos);
                 if (isInSVG) {
-                    var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                    var rect = document.createElementNS("://www.w3.org/2000/svg", "rect");
                     var bbox = node.parentElement.getBBox();
                     rect.x.baseVal.value = bbox.x;
                     rect.y.baseVal.value = bbox.y;

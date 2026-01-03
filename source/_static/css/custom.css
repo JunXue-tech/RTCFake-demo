@@ -1,176 +1,174 @@
-/* 如果希望将样式放在单独的CSS文件中 */
-.dataset-section {
-    margin: 40px 0;
-    padding: 20px 0;
-    border-top: 2px solid #000;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    text-align: center; 
 }
 
-.dataset-subsection {
-    margin: 30px 0 20px 0;
+div.sphinxsidebar,
+div.related,
+div.sphinxsidebarwrapper,
+.sphinxsidebar,
+.related,
+.sidebar {
+    display: none !important;
 }
 
-.dataset-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 14px;
+div.search,
+form.search,
+input.search,
+#searchbox,
+.search {
+    display: none !important;
 }
 
-.dataset-table th {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 12px 8px;
+.body {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    float: none !important;
+}
+
+.document {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+}
+
+.bodywrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    float: none !important;
+}
+
+div.body {
+    margin: 0 auto !important;
+    padding: 20px 40px !important;
+    max-width: 1400px !important;
     text-align: left;
+}
+
+h1 {
+    font-size: 24px !important;
     font-weight: bold;
+    text-align: center;
+    margin: 20px 0 10px 0 !important;
+    padding: 0 !important;
+}
+
+h2 {
+    font-size: 22px !important;
+    font-weight: bold;
+    margin: 30px 0 20px 0 !important;
+    padding: 0 !important;
+    text-align: left;
     color: #000;
-    vertical-align: middle;
+    border: none !important;
 }
 
-.dataset-table td {
-    border: 1px solid #ddd;
-    padding: 10px 8px;
-    vertical-align: top;
-    color: #333;
+h3 {
+    font-size: 20px !important;
+    font-weight: bold;
+    margin: 40px 0 20px 0 !important;
+    padding: 0 !important;
+    text-align: left;
+    color: #000;
+    border: none !important;
 }
 
-.audio-player {
-    margin: 5px 0;
-    min-width: 200px;
+h4 {
+    font-size: 18px !important;
+    font-weight: bold;
+    margin: 30px 0 15px 0 !important;
+    padding: 0 !important;
+    text-align: left;
+    color: #444;
+    border: none !important;
 }
 
-.audio-player audio {
-    width: 200px;
-    height: 30px;
-    filter: grayscale(100%);
+table, th, td {
+    border: none !important;
+    border-collapse: collapse !important;
+}
+
+img {
+    border: none !important;
+    outline: none !important;
+}
+
+hr {
+    display: none !important;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.author-info {
+    text-align: center !important;
+    font-size: 16px;
+    font-style: italic;
+    margin: 0 0 30px 0 !important;
+    color: #555;
+}
+
+.overview-text {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin: 30px 0 50px 0 !important;
+    text-align: justify !important;
+}
+
+.scrollable-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    margin: 20px 0 40px 0 !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.compact-table {
+    border: none !important;
+}
+
+.compact-table th,
+.compact-table td {
+    border: none !important;
 }
 
 .spectrogram-img {
-    max-width: 280px;
-    max-height: 120px;
-    border: 1px solid #eee;
-    margin: 5px 0;
-}
-
-.sample-id {
-    font-family: monospace;
-    font-size: 13px;
-    color: #000;
-    word-break: break-all;
-}
-
-.platform-tag {
-    display: inline-block;
-    padding: 2px 6px;
-    margin: 1px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    font-size: 11px;
-    color: #333;
-}
-
-.note-box {
-    background-color: #f9f9f9;
-    border-left: 4px solid #ccc;
-    padding: 10px 15px;
-    margin: 15px 0;
-    font-size: 13px;
-}
-
-/* 音频播放器样式优化 */
-.audio-player {
-    margin: 5px 0;
-    min-width: 200px;
-    max-width: 250px; /* 添加最大宽度限制 */
-    width: 100%; /* 确保自适应 */
-}
-
-.audio-player audio {
-    width: 100% !important; /* 使用 !important 确保覆盖浏览器默认样式 */
-    min-width: 200px; /* 确保最小宽度 */
-    height: 30px;
-    max-width: 250px; /* 确保最大宽度 */
-    filter: grayscale(100%);
-}
-
-/* 确保表格单元格有足够的空间 */
-.dataset-table td.audio-cell {
-    min-width: 220px; /* 增加最小宽度 */
-    max-width: 260px; /* 添加最大宽度限制 */
-    padding: 12px 10px; /* 增加内边距 */
-}
-
-/* 为音频播放器添加包装容器 */
-.audio-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-width: 200px;
-    max-width: 250px;
-    margin: 0 auto;
-}
-
-/* 添加滚动容器，确保表格在小屏幕上也能正常显示 */
-.table-scroll-container {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    margin: 20px 0;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 15px;
-    border: 1px solid #eee;
-    border-radius: 4px;
-}
-
-/* 确保表格不会被压缩 */
-.dataset-table {
-    width: auto; /* 从 100% 改为 auto */
-    min-width: 100%; /* 确保最小宽度为100% */
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 14px;
-}
-
-/* 响应式调整 */
-@media screen and (max-width: 1200px) {
-    .audio-player {
-        min-width: 180px;
-    }
-    
-    .audio-player audio {
-        min-width: 180px;
-    }
-    
-    .dataset-table td.audio-cell {
-        min-width: 200px;
-    }
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
 }
 
 @media screen and (max-width: 768px) {
-    .audio-player {
-        min-width: 160px;
+    div.body {
+        padding: 20px 15px !important;
     }
     
-    .audio-player audio {
-        min-width: 160px;
+    h1 {
+        font-size: 20px !important;
     }
     
-    .dataset-table td.audio-cell {
-        min-width: 180px;
+    h2 {
+        font-size: 18px !important;
     }
-}
-
-.dataset-table td:nth-child(2),
-.dataset-table td:nth-child(3),
-.dataset-table td:nth-child(4),
-.dataset-table td:nth-child(5),
-.dataset-table td:nth-child(6),
-.dataset-table td:nth-child(7),
-.dataset-table td:nth-child(8),
-.dataset-table td:nth-child(9),
-.dataset-table td:nth-child(10),
-.dataset-table td:nth-child(11) {
-    min-width: 220px !important;
-    max-width: 260px !important;
+    
+    h3 {
+        font-size: 16px !important;
+    }
+    
+    h4 {
+        font-size: 14px !important;
+    }
 }

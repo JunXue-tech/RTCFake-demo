@@ -11,123 +11,135 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        overflow-x: hidden;
-        overflow-y: auto;
+        text-align: center; 
     }
     
     .main-container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 20px;
-        overflow-x: hidden;
+        padding: 40px 20px;
+        text-align: left; 
+        box-sizing: border-box;
     }
     
-    .page-title {
-        font-size: 28px; /* 从32px减小到28px */
+    .paper-title {
+        font-size: 24px;
         font-weight: bold;
         text-align: center;
-        margin: 30px 0 10px 0;
-        padding-bottom: 15px;
-        border-bottom: 3px solid #000;
+        margin: 0 0 10px 0;
+        padding: 0;
     }
     
     .author-info {
         text-align: center;
-        font-size: 16px; /* 从18px减小到16px */
+        font-size: 16px;
         font-style: italic;
-        margin: 0 0 20px 0;
+        margin: 0 0 30px 0;
         color: #555;
     }
     
-    .section-title {
-        font-size: 22px; /* 从26px减小到22px */
+    .dataset-title {
+        font-size: 22px;
         font-weight: bold;
-        margin: 35px 0 18px 0; /* 调整边距使其更紧凑 */
-        padding-bottom: 6px;
-        border-bottom: 2px solid #333;
+        margin: 30px 0 20px 0;
+        padding: 0;
+        text-align: left;
+        color: #000;
+    }
+    
+    .section-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 40px 0 20px 0;
+        padding: 0 0 8px 0;
+        text-align: left;
+        color: #000;
     }
     
     .subsection-title {
-        font-size: 18px; /* 从20px减小到18px */
+        font-size: 18px;
         font-weight: bold;
-        margin: 25px 0 12px 0; /* 调整边距使其更紧凑 */
+        margin: 30px 0 15px 0;
+        padding: 0;
+        text-align: left;
         color: #444;
     }
     
     .table-title {
-        font-size: 16px; /* 从18px减小到16px */
+        font-size: 16px;
         font-weight: bold;
-        margin: 20px 0 8px 0; /* 调整边距使其更紧凑 */
-        color: #333;
+        margin: 25px 0 10px 0;
+        padding: 0;
         text-align: left;
-    }
-    
-    .section-divider {
-        height: 2px;
-        background-color: #e0e0e0;
-        margin: 40px 0;
+        color: #333;
     }
     
     .scrollable-container {
         width: 100%;
         overflow-x: auto;
         overflow-y: hidden;
-        margin: 20px 0;
+        margin: 20px 0 40px 0;
         -webkit-overflow-scrolling: touch;
+        border: none !important; 
     }
     
     .compact-table {
         width: auto;
         min-width: 100%;
         border-collapse: collapse;
-        font-size: 13px;
+        font-size: 14px;
         white-space: nowrap;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        border: none !important;
     }
     
     .compact-table th {
         background-color: #f5f5f5;
-        padding: 10px 8px;
+        padding: 12px 10px;
         text-align: center;
         font-weight: bold;
         color: #000;
-        border: 1px solid #ddd;
         vertical-align: middle;
         min-width: 120px;
+        border: none !important; 
     }
     
     .compact-table td {
-        padding: 8px 6px;
+        padding: 10px 8px;
         text-align: center;
         vertical-align: top;
         color: #000;
-        border: 1px solid #ddd;
         min-width: 120px;
+        border: none !important; 
     }
     
     .compact-table .audio-cell {
-        min-width: 180px;
+        min-width: 200px;
+        border: none !important;
     }
     
     .compact-table .spectrogram-cell {
         min-width: 280px;
+        border: none !important;
     }
     
     .audio-player {
-        margin: 5px 0;
+        margin: 8px 0;
     }
     
     .audio-player audio {
-        width: 180px;
-        height: 30px;
+        width: 200px;
+        height: 35px;
+        border-radius: 4px;
     }
     
     .spectrogram-img {
-        width: 260px;
+        width: 280px;
         height: auto;
-        max-height: 120px;
-        margin: 5px 0;
-        border: 1px solid #eee;
+        max-height: 140px;
+        margin: 8px 0;
+        border: none !important; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
     
     .lang-row {
@@ -143,6 +155,9 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
     .row-label {
         font-weight: bold;
         background-color: #f0f0f0;
+        text-align: left;
+        padding-left: 15px !important;
+        border: none !important;
     }
     
     .compact-table tbody tr:nth-child(even) {
@@ -150,32 +165,29 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
     }
     
     .compact-table tbody tr:hover {
-        background-color: #f0f0f0;
+        background-color: #f5f5f5;
     }
     
     .overview-text {
         font-size: 16px;
         line-height: 1.7;
-        margin: 20px 0 40px 0;
+        margin: 30px 0 50px 0;
         text-align: justify;
     }
     
-    .left-text {
-        text-align: left;
+    .section-divider {
+        display: none !important;
     }
     </style>
 
     <div class="main-container">
-    
-    <h1 class="page-title">The RTCFake Dataset</h1>
     <p class="author-info">Anonymous ACL submission</p>
     
-    <h2 class="section-title">Overview</h2>
+    <h2 class="dataset-title">The RTCFake Dataset</h2>
     
     <div class="overview-text">
-        The RTCFake dataset is a first-of-its-kind, large-scale speech deepfake collection specifically designed for real-time communication (RTC) scenarios, comprising approximately 600 hours of speech and covering 307 speakers. While existing research primarily relies on offline simulations, this dataset addresses that limitation by providing precisely paired "offline-online" samples transmitted through seven mainstream platforms, including QQ, Zoom, WeChat, etc. This dataset captures the complex, nonlinear distortions introduced by real-world "black-box" transmission, such as unknown noise suppression, echo cancellation and codec compression, providing a robust benchmark for evaluating detection models under realistic communication conditions.    </div>
-    
-    <div class="section-divider"></div>
+        The RTCFake dataset is a first-of-its-kind, large-scale speech deepfake collection specifically designed for real-time communication (RTC) scenarios, comprising approximately 600 hours of speech and covering 307 speakers. While existing research primarily relies on offline simulations, this dataset addresses that limitation by providing precisely paired "offline-online" samples transmitted through seven mainstream platforms, including QQ, Zoom, WeChat, etc. This dataset captures the complex, nonlinear distortions introduced by real-world "black-box" transmission, such as unknown noise suppression, echo cancellation and codec compression, providing a robust benchmark for evaluating detection models under realistic communication conditions.
+    </div>
     
     <h2 class="section-title">Demos</h2>
     
