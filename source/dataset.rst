@@ -4,197 +4,199 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
 .. raw:: html
 
     <style>
-    body {
-        font-family: 'Helvetica Neue', Arial, sans-serif;
-        color: #000000;
-        background-color: #ffffff;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        text-align: center; 
-    }
-    
-    .main-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 40px 20px;
-        text-align: left; 
-        box-sizing: border-box;
-    }
-    
-    .paper-title {
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
-        margin: 0 0 10px 0;
-        padding: 0;
-    }
-    
-    .author-info {
-        text-align: center;
-        font-size: 16px;
-        font-style: italic;
-        margin: 0 0 30px 0;
-        color: #555;
-    }
-    
-    .dataset-title {
-        font-size: 22px;
-        font-weight: bold;
-        margin: 30px 0 20px 0;
-        padding: 0;
-        text-align: left;
-        color: #000;
-    }
-    
-    .section-title {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 40px 0 20px 0;
-        padding: 0 0 8px 0;
-        text-align: left;
-        color: #000;
-    }
-    
-    .subsection-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin: 30px 0 15px 0;
-        padding: 0;
-        text-align: left;
-        color: #444;
-    }
-    
-    .table-title {
-        font-size: 16px;
-        font-weight: bold;
-        margin: 25px 0 10px 0;
-        padding: 0;
-        text-align: left;
-        color: #333;
-    }
-    
-    .scrollable-container {
-        width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        margin: 20px 0 40px 0;
-        -webkit-overflow-scrolling: touch;
-        border: none !important; 
-    }
-    
-    .compact-table {
-        width: auto;
-        min-width: 100%;
-        border-collapse: collapse;
-        font-size: 14px;
-        white-space: nowrap;
-        margin-bottom: 20px;
-        border: none !important;
-    }
-    
-    .compact-table th {
-        background-color: #f5f5f5;
-        padding: 12px 10px;
-        text-align: center;
-        font-weight: bold;
-        color: #000;
-        vertical-align: middle;
-        min-width: 120px;
-        border: none !important; 
-    }
-    
-    .compact-table td {
-        padding: 10px 8px;
-        text-align: center;
-        vertical-align: top;
-        color: #000;
-        min-width: 120px;
-        border: none !important; 
-    }
-    
-    .compact-table .audio-cell {
-        min-width: 200px;
-        border: none !important;
-    }
-    
-    .compact-table .spectrogram-cell {
-        min-width: 280px;
-        border: none !important;
-    }
-    
-    .audio-player {
-        margin: 8px 0;
-    }
-    
-    .audio-player audio {
-        width: 200px;
-        height: 35px;
-        border-radius: 4px;
-    }
-    
-    .spectrogram-img {
-        width: 280px;
-        height: auto;
-        max-height: 140px;
-        margin: 8px 0;
-        border: none !important; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    
-    .lang-row {
-        background-color: #fafafa;
-    }
-    
-    .empty-cell {
-        color: #999;
-        font-style: italic;
-        background-color: #f9f9f9;
-    }
-    
-    .row-label {
-        font-weight: bold;
-        background-color: #f0f0f0;
-        text-align: left;
-        padding-left: 15px !important;
-        border: none !important;
-    }
-    
-    .compact-table tbody tr:nth-child(even) {
-        background-color: #fafafa;
-    }
-    
-    .compact-table tbody tr:hover {
-        background-color: #f5f5f5;
-    }
-    
-    .overview-text {
-        font-size: 16px;
-        line-height: 1.7;
-        margin: 30px 0 50px 0;
-        text-align: justify;
-    }
-    
-    .section-divider {
-        display: none !important;
-    }
-    </style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #000000;
+            background-color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            text-align: center; 
+        }
+        
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: left; 
+            box-sizing: border-box;
+        }
+        
+        .paper-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 0 10px 0;
+            padding: 0;
+        }
+        
+        .author-info {
+            text-align: center;
+            font-size: 16px;
+            font-style: italic;
+            margin: 0 0 30px 0;
+            color: #555;
+        }
+        
+        .dataset-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 30px 0 20px 0;
+            padding: 0;
+            text-align: left;
+            color: #000;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 40px 0 20px 0;
+            padding: 0 0 8px 0;
+            text-align: left;
+            color: #000;
+        }
+        
+        .subsection-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 30px 0 15px 0;
+            padding: 0;
+            text-align: left;
+            color: #444;
+        }
+        
+        .table-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 25px 0 10px 0;
+            padding: 0;
+            text-align: left;
+            color: #333;
+        }
+        
+        .scrollable-container {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            margin: 20px 0 40px 0;
+            -webkit-overflow-scrolling: touch;
+            border: none !important; 
+        }
+        
+        .compact-table {
+            width: auto;
+            min-width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            white-space: nowrap;
+            margin-bottom: 10px;
+            border: none !important;
+            text-align: center;
+        }
+        
+        .compact-table th {
+            background-color: #f5f5f5;
+            padding: 12px 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #353535;
+            vertical-align: middle;
+            min-width: 80px;
+            border: none !important; 
+        }
+        
+        .compact-table td {
+            padding: 8px 8px;
+            text-align: center;
+            vertical-align: middle;
+            color: #353535;
+            width: auto;
+            border: none !important; 
+        }
+        
+        .compact-table .audio-cell {
+            min-width: 180px;
+            border: none !important;
+            padding: 20px 10px !important;
+        }
+        
+        .compact-table .spectrogram-cell {
+            min-width: 250px;
+            text-align: middle;
+            border: none !important;
+            padding: 20px 10px !important;
+        }
+        
+        .audio-player {
+            margin: 8px 0;
+        }
+        
+        .audio-player audio {
+            width: 180px;
+            height: 35px;
+            border-radius: 4px;
+        }
+        
+        .spectrogram-img {
+            width: 250px;
+            height: auto;
+            margin: 8px 0;
+            border: none !important; 
+        }
+        
+        .lang-row {
+            background-color: #fafafa;
+        }
+        
+        .empty-cell {
+            color: #999;
+            font-style: italic;
+            background-color: #fafafa;
+        }
+        
+        .row-label {
+            font-weight: bold;
+            background-color: #f7f7f7;
+            text-align: center;
+            padding-left: 15px !important;
+            border: none !important;
+        }
+        
+        .compact-table tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        
+        .compact-table tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .overview-text {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 30px 0 50px 0;
+            text-align: justify;
+        }
+        
+        .section-divider {
+            display: none !important;
+        }
+        </style>
 
     <div class="main-container">
     <p class="author-info">Anonymous ACL submission</p>
-    
+
     <h2 class="dataset-title">Overview</h2>
-    
+
     <div class="overview-text">
-        The RTCFake dataset is the first large-scale speech deepfake dataset tailored for real-time communication scenarios, which contains approximately 600 hours of speech. The dataset is constructed by transmitting speech through multiple mainstream social media and conferencing platforms (e.g., Zoom), enabling precise pairing between offline and online speech. 
+        The RTCFake dataset is the first large-scale speech deepfake dataset tailored for real-time communication scenarios, which contains approximately 600 hours of speech. The dataset is constructed by transmitting speech through multiple mainstream social media and conferencing platforms (e.g., Zoom), enabling precise pairing between offline and online speech. This dataset captures the complex, nonlinear distortions introduced by real-world "black-box" transmission, such as unknown noise suppression, echo cancellation and codec compression, providing a robust benchmark for evaluating detection models under realistic communication conditions.
     </div>
-    
+
     <h2 class="section-title">Demos</h2>
-    
+
     <h3 class="subsection-title">Offline Speech</h3>
-    
+
     <h4 class="table-title">Training Subset</h4>
-    
+
     <div class="scrollable-container">
         <table class="compact-table">
             <thead>
@@ -302,11 +304,11 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
         </table>
     </div>
     <p style="font-size: 13px; color: #666; font-style: italic; margin-top: -40px; margin-bottom: 25px; text-align: left;">
-        * The vacancies in the table are due to the fact that the generation methods used for constructing Chinese and English data are not entirely identical.
+        * The missing entries in the table arise because the methods used to generate the Chinese and English data are not entirely identical.
     </p>
-    
+
     <h4 class="table-title">Development Subset</h4>
-    
+
     <div class="scrollable-container">
         <table class="compact-table">
             <thead>
@@ -413,9 +415,9 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
             </tbody>
         </table>
     </div>
-    
+
     <h4 class="table-title">Evaluation Subset</h4>
-    
+
     <div class="scrollable-container">
         <table class="compact-table">
             <thead>
@@ -588,13 +590,13 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
             </tbody>
         </table>
     </div>
-    
+
     <div class="section-divider"></div>
-    
+
     <h3 class="subsection-title">Paired Offline-online Speech</h3>
-    
+
     <h4 class="table-title">Comparison of Identical Real and Fake Utterances Across Multiple Transmission Platforms</h4>
-    
+
     <div class="scrollable-container">
         <table class="compact-table">
             <thead>
@@ -604,7 +606,7 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
                     <th>QQ</th>
                     <th>Zoom</th>
                     <th>DingTalk</th>
-                    <th>Tencent<br>Meeting</th>
+                    <th>Voov</th>
                     <th>Lark</th>
                     <th>WeChat</th>
                     <th>Telegram</th>
@@ -750,9 +752,9 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
             </tbody>
         </table>
     </div>
-    
+
     <h4 class="table-title">Comparison of Identical Clean and Noisy Utterances Across Multiple Transmission Platforms</h4>
-    
+
     <div class="scrollable-container">
         <table class="compact-table">
             <thead>
@@ -762,7 +764,7 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
                     <th>QQ</th>
                     <th>Zoom</th>
                     <th>DingTalk</th>
-                    <th>Tencent<br>Meeting</th>
+                    <th>Voov</th>
                     <th>Lark</th>
                     <th>WeChat</th>
                     <th>Telegram</th>
@@ -908,9 +910,9 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
             </tbody>
         </table>
     </div>
-    
+
     <h4 class="table-title">Utterances with Different Noises Transmitted through the Same Platform (Lark)</h4>
-    
+
     <div class="scrollable-container">
         <table class="compact-table">
             <thead>
@@ -1032,5 +1034,27 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
             </tbody>
         </table>
     </div>
-    
-    </div> <!-- End of main-container -->
+
+    </div> <!-- End of main-container --></section>
+
+
+                <div class="clearer"></div>
+            </div>
+        </div>
+        <div class="clearer"></div>
+        </div>
+        <div class="related" role="navigation" aria-label="related navigation">
+        <h3>Navigation</h3>
+        <ul>
+            <li class="right" style="margin-right: 10px">
+            <a href="genindex.html" title="General Index"
+                >index</a></li>
+            <li class="right" >
+            <a href="index.html" title="Welcome to offline-online-dataset’s documentation!"
+                >previous</a> |</li>
+            <li class="nav-item nav-item-0"><a href="index.html">offline-online-dataset   documentation</a> &#187;</li>
+            <li class="nav-item nav-item-this"><a href="">Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phoneme-Guided Consistency Learning</a></li> 
+        </ul>
+        </div>
+        <div class="footer" role="contentinfo">
+        </div>
