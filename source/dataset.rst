@@ -1,4 +1,4 @@
-Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phoneme-Guided Consistency Learning
+RTCFake: Speech Deepfake Detection in Real-Time Communication
 ====================
 
 .. raw:: html
@@ -12,6 +12,12 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
             margin: 0;
             padding: 0;
             text-align: center; 
+        }
+
+        h1 { 
+            font-size: 28px !important;
+            margin-top: 50px !important;
+            margin-bottom: 10px !important;
         }
         
         .main-container {
@@ -188,7 +194,7 @@ Speech Deepfake Detection in Real-Time Communication:Dataset, Analysis, and Phon
     <h2 class="dataset-title">Overview</h2>
 
     <div class="overview-text">
-        The RTCFake dataset is the first large-scale speech deepfake dataset tailored for real-time communication scenarios, which contains approximately 600 hours of speech. The dataset is constructed by transmitting speech through multiple mainstream social media and conferencing platforms (e.g., Zoom), enabling precise pairing between offline and online speech. This dataset captures the complex, nonlinear distortions introduced by real-world "black-box" transmission, such as unknown noise suppression, echo cancellation and codec compression, providing a robust benchmark for evaluating detection models under realistic communication conditions.
+        The RTCFake dataset is the first large-scale speech deepfake dataset tailored for real-time communication scenarios, which contains approximately 600 hours of speech. The dataset is constructed by transmitting speech through multiple mainstream social media and conferencing platforms (e.g., Zoom), enabling precise pairing between offline and online speech. This dataset captures the complex, nonlinear distortions introduced by real-world "black-box" transmission, such as unknown noise suppression, echo cancellation and codec compression, providing a more realistic and challenging evaluation benchmark for speech deepfake detection.
     </div>
 
     <h2 class="section-title">Demos</h2>
