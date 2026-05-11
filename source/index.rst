@@ -3,6 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. raw:: html
+
+   <meta http-equiv="refresh" content="0; url=dataset.html">
+   <script>window.location.href = 'dataset.html';</script>
+
 Welcome to offline-online-dataset's documentation!
 ==================================================
 

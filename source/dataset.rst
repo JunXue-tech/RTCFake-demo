@@ -189,7 +189,7 @@ RTCFake: Speech Deepfake Detection in Real-Time Communication
         </style>
 
     <div class="main-container">
-    <p class="author-info">Anonymous ACL submission</p>
+    <p class="author-info">Jun Xue, Zhuolin Yi, Yihuan Huang, Yanzhen Ren, Yujie Chen, Cunhang Fan, Zicheng Su, Yongcheng Zhang, Bo Cai</p>
 
     <h2 class="dataset-title">Overview</h2>
 
